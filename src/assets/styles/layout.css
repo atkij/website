@@ -1,0 +1,67 @@
+/* OVERALL LAYOUT */
+body {
+	margin: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1em;
+}
+
+header, footer {
+	box-sizing: border-box;
+	flex: 1 0 100%;
+}
+
+main {
+	flex: 3 1 40em;
+}
+
+aside {
+	flex: 1 1 20em;
+}
+
+/* HEADER */
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 0.5em;
+	
+	h1 {
+		margin: 0 1em 0 0;
+		flex: 1 0 auto;
+	}
+	
+	nav {
+	}
+}
+
+/* NAVIGATION */
+nav ul {
+	margin: 0.5em 0 0.5em 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 1em;
+	list-style-type: none;
+}
+
+nav ul li {
+}
+
+/* MAIN */
+main {
+}
+
+/* ASIDE */
+aside {
+}
+
+/* FOOTER */
+footer {
+}
+
+/* HEADERS */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+	margin-top: 0;
+}

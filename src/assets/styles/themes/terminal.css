@@ -1,0 +1,112 @@
+@mixin light {
+	@include dark;
+}
+
+@mixin dark {
+	@include _theme(
+		$foreground: white,
+		$background: black,
+		$primary: lime,
+		$secondary: green,
+		$tertiary: limegreen,
+	);
+}
+
+@mixin _theme($foreground, $background, $primary, $secondary, $tertiary) {
+	body {
+		font-family: monospace;
+		font-size: 1.1em;
+		color: $foreground;
+		background: $background;
+	}
+	
+	/* GENERIC ELEMENTS */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: monospace;
+		color: $tertiary;
+	}
+	
+	p {
+		font-family: monospace;
+		font-size: 1.1em;
+	}
+	
+	a {
+		color: $tertiary;
+	}
+	
+	a:visited {
+		color: $secondary;
+	}
+	
+	section {
+		h1 {
+			color: $primary;
+		}
+	}
+	
+	/* HEADER */
+	header {
+		h1 {
+			a {
+				text-decoration: none;
+				color: $primary;
+			}
+			
+			a:visited {
+				color: $primary;
+			}
+		
+			a::before {
+				content: "$ ";
+			}
+		}
+	}
+
+	/* NAVIGATION */
+	nav {
+		a {
+			font-family: monospace;
+			font-weight: bold;
+			font-size: 1rem;
+			text-decoration: none;
+			color: $secondary;
+		}
+		
+		/*a:link {*/
+		
+		a:visited {
+			color: $secondary;
+		}
+		
+		a:hover {
+			color: $tertiary;
+		}
+		
+		a.active {
+			color: $primary;
+		}
+	}
+
+	/* MAIN */
+	main {
+		h1 {
+			font-size: 1.5em;
+		}
+	}
+
+	/* ASIDE */
+	aside {
+		section {
+			h3 {
+				padding: 0.1em 0.1em 0.1em 0.3em;
+				color: $background;
+				background-color: $tertiary;
+			}
+			
+			h3::before {
+				content: "$ ";
+			}
+		}
+	}
+}

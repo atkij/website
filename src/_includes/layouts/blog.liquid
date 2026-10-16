@@ -1,0 +1,14 @@
+---
+layout: layouts/base.liquid
+---
+
+<main>	
+	{{ content }}
+</main>
+
+<aside>
+	{% include asides/related limit=5 %}
+	{% include asides/links %}
+	{% include asides/posts posts=site.posts %}
+	{% include asides/login %}
+</aside>

@@ -1,0 +1,15 @@
+[
+  {
+    name: "Home",
+    link: "/"
+  },
+  {
+    name: "About,
+    link: "/about.html"
+  },
+- name: Blog
+  link: /blog.html
+- name: Games
+  link: /games.html
+- name: Resources
+  link: /resources.html

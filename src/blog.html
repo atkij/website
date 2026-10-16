@@ -1,0 +1,21 @@
+---
+title: Blog
+layout: layouts/blog.liquid
+---
+
+<section>
+	<h1>Blog</h1>
+	
+	{% for post in site.posts limit: site.paginate %}
+		{% include post/card.html post=post %}
+	{% endfor %}
+	
+	<p>
+		{% assign num_posts = site.posts | size %}
+		{% if num_posts > site.paginate %}
+			<a href="{{ site.paginate_path | replace: ':num', '2' }}">View older posts</a></p>
+		{% else %}
+			No older posts to view.
+		{% endif %}
+	</p>
+</section>
